@@ -13,20 +13,32 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-		<div class="container" height="100vh" width="100vw" style="display: flex; justify-content: center; padding: 1em; flex-direction: column; align-items: center;">
-			<div style="display: flex; height: 15dvh; width: 45vw; justify-content: center;">
+		<div class="container" height="100vh" width="100vw" style="display: flex; justify-content: center; padding: .2em; flex-direction: column; align-items: center;">
+			<div class="header">
 				<img height="100%" width="55%" src="images/myLogo.png" at="logo"/>
 			</div>
-			<div style="display: flex; background-color: rgba(145, 255, 200, 0.326); height: 50vh; width: 65vw;">
-			</div>
-			<div class="textBox" style="display: flex; background-color: rgb(231, 253, 255); height: 100%; width: 50vw;">
-				<div style="width: 30%;">
-					<img src="images/meportrait.gif" alt="portrait" height="100%" width="100%"/>
+			<div class="choicesContainer">
+				<div class="choicebox"  >
+					<img id="proj" height="65%" src="images/projectIcon.png"/>
+					<span>My Projects</span>
 				</div>
-				<div style="height:100%; width: 100%; border:solid black; border-width: 3px 3px 3px 0px; padding: .5em; ">
+				<div  class="choicebox" >
+					<img id="am" height="65%" src="images/aboutmeIcon.png"/>
+					<span>About Me</span>
+				</div>
+				<div class="choicebox"  >
+					<img id="cont" height="65%" src="images/contactIcon.png"/>
+					<span>Contact</span>
+				</div>
+			</div>
+			<div class="textBox">
+				<div style="width: 30%;">
+					<img class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="100%" width="100%"/>
+				</div>
+				<div class="dialoguePart">
 					<div style="height: 25vh;">
-						<span class="type" style="--n:103; font-size: 14px;">
-							Hi, I'm John Vergil Aparri, a web developer. Welcome to my portfolio website! What do you wanna check?
+						<span class="type" style="--n:119">
+							Hi, I'm John Vergil Aparri, a web developer and game dev hobbyist. Welcome to my portfolio website! How can I help you?
 						</span>
 					</div>
 				</div>

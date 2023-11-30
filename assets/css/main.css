@@ -5,17 +5,22 @@
 	src: url(fonts/slkscr.ttf);
   }
 
+  * {
+	box-sizing: border-box;
+  }
+
   body {
 	/* background-image: url("images/overlay.png"), url("images/newbg.gif"); */
 	background-image: linear-gradient(to top, #640039, #4c0a2b, #350d1e, #200a12, #000000);
 	background-repeat: repeat, no-repeat;
 	background-size: auto, 100% 100%;
 	background-attachment: fixed;
-	overflow: hidden;
-}
-	.type {
+	}
+.type {
 			font-family: "Press Start 2P";
+			font-size: 18px;
 			color:#0000;
+			line-height: 1.5;
 			background:
 			  linear-gradient(-90deg,#000000 5px,#0000 0) 10px 0,
 			  linear-gradient(#000000 0 0) 0 0;
@@ -43,17 +48,114 @@
 			50% {background-position:0 -100%,0 0}
 		  }
 	
+		
 		.textBox {
-			/* Apply animation to this element */	
+			display: flex; 
+			height: 100%; 
+			width: 50vw;
+			bottom: 10;
 			animation: fly 1s ease-out;
 		   }
-		   /* Move it (define the animation) */
-		   @keyframes fly {
+		@keyframes fly {
 			0%   { 
 			transform: translateY(200%); 		
 			}
 			100% { 
 			transform: translateY(0%); 
 			}
-		   }
+		}
+.talksprite {
+	transition: ease-out;
+	animation: talk 21s infinite;
+	animation-iteration-count: 1;
+}
+
+@keyframes talk {
+	from {content:url(../../images/meportrait.gif)}
+	to {content:url(../../images/meportraitIdle.gif)}
+}
+
+.header{
+	display: flex; 
+	height: 15dvh; 
+	width: 45vw; 
+	justify-content: center; 
+	margin: .2em;
+}
+.choicesContainer{
+	display: flex; 
+	height: 50vh; 
+	width: 65vw; 
+	padding: .5em; 
+	justify-content: center;
+	flex-direction: row;
+}
+
+.choicebox {
+	display: flex; 
+	align-items: center; 
+	flex-direction: column; 
+	height: 80%; 
+	justify-content: center; 
+	margin: 2em;
+	span {
+		color: rgb(0,255,172); 
+		font-family: 'Press Start 2P'; 
+		margin: .5em;
+	}
+}
+
+.choicebox:hover{
+	cursor: pointer;
+	span{
+		color: rgb(255, 58, 130);
+	}
+}
+.dialoguePart{
+	height:100%; 
+	width: 100%; 
+	border:solid black; 
+	border-width: 3px 3px 3px 0px; 
+	padding: .5em;
+	background-color: mintcream;
+}
+
+@media screen and (max-width: 600px) {
+	.header{
+		width: 50%;
+		height: 5dvh;
+	}
+	.choicesContainer {
+	  flex-direction: column;
+	}
+	.choicebox{
+		height: 30%;
+		margin: .1em;
+	}
+	.choicebox span{
+		width: 100%;
+		font-size: 12px;
+		text-align: center;
+	}
+	.textBox{
+		flex-direction: column;
+		
+		
+	}
+	.dialoguePart{
+		border-width: 3px 3px 3px 3px; 
+		font-size: 8px;
+		height: 80%;
+	}
+	.type{
+		font-size: 12px;
+	}
+	.talksprite{
+		height: 105%;
+		width: 105%;
+	}
+
+  }
+
+
 		  
