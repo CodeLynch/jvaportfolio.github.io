@@ -1,11 +1,10 @@
 <!DOCTYPE HTML>
-
-
 <html>
 	<head>
 		<title>John Vergil Aparri</title>
 		<link rel="stylesheet" href="main.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		
 	</head>
 	<body class="is-preload">
 		<div class="container" height="100vh" width="100vw" style="display: flex; justify-content: center; padding: .2em; flex-direction: column; align-items: center;">
@@ -13,16 +12,16 @@
 				<img height="100%" width="55%" src="images/myLogo.png" at="logo"/>
 			</div>
 			<div class="choicesContainer">
-				<div class="choicebox"  >
+				<div class="choicebox" onmouseover="newImg('proj', 'images/projectIconH.gif')" onmouseleave="newImg('proj', 'images/projectIcon.gif')" >
 					<img id="proj" height="65%" src="images/projectIcon.gif"/>
 					<span>My Projects</span>
 				</div>
-				<div  class="choicebox" >
-					<img id="am" height="65%" src="images/aboutmeIcon.png"/>
+				<div  class="choicebox" onmouseover="newImg('am', 'images/aboutmeIconH.gif')" onmouseleave="newImg('am', 'images/aboutmeIcon.gif')">
+					<img id="am" height="65%" src="images/aboutmeIcon.gif"/>
 					<span>About Me</span>
 				</div>
-				<div class="choicebox"  >
-					<img id="cont" height="65%" src="images/contactIcon.png"/>
+				<div class="choicebox"  onmouseover="newImg('cont', 'images/contactIconH.gif')" onmouseleave="newImg('cont', 'images/contactIcon.gif')">
+					<img id="cont" height="65%" src="images/contactIcon.gif"/>
 					<span>Contact</span>
 				</div>
 			</div>
@@ -44,6 +43,7 @@
 
 
 		<!-- Scripts -->
+			<script src="funcs.js"></script>
 			<!-- <script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
