@@ -2,7 +2,7 @@
 @import url("fontawesome-all.min.css");
 @font-face {
 	font-family: silkscreen;
-	src: url(fonts/slkscr.ttf);
+	src: url(assets/css/fonts/slkscr.ttf);
   }
 
   * {
@@ -71,8 +71,8 @@
 }
 
 @keyframes talk {
-	from {content:url(../../images/meportrait.gif)}
-	to {content:url(../../images/meportraitIdle.gif)}
+	from {content:url(images/meportrait.gif)}
+	to {content:url(images/meportraitIdle.gif)}
 }
 
 .header{
