@@ -11,15 +11,15 @@
 	}
 .type {
 			font-family: "Press Start 2P";
-			font-size: 18px;
-			color:#0000;
+			color: #0000;
+			font-size: 14px;
 			line-height: 1.5;
 			background:
-			  linear-gradient(-90deg,#000000 5px,#0000 0) 10px 0,
-			  linear-gradient(#000000 0 0) 0 0;
+			  linear-gradient(-90deg,magenta 5px,#0000 0) 10px 0,
+			  linear-gradient(magenta 0 0) 0 0;
 			background-size:calc(var(--n)*1ch) 200%;
-			-webkit-background-clip:padding-box,text;
-			background-clip:padding-box,text;
+			-webkit-background-clip:padding-box, text;
+			background-clip:padding-box, text;
 			background-repeat:no-repeat;
 			animation: 
 			  b .7s infinite steps(1),   
@@ -44,9 +44,11 @@
 		
 		.textBox {
 			display: flex; 
-			height: 100%; 
+			height: 25%; 
 			width: 50vw;
-			bottom: 10;
+			position: fixed;
+			bottom: 40px;
+			bottom: .1;
 			animation: fly 1s ease-out;
 		   }
 		@keyframes fly {
@@ -68,6 +70,7 @@
 	to {content:url(images/meportraitIdle.gif)}
 }
 
+
 .header{
 	display: flex; 
 	height: 15dvh; 
@@ -76,6 +79,9 @@
 	margin: .2em;
 }
 .choicesContainer{
+	background-image: url(images/box.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	display: flex; 
 	height: 50vh; 
 	width: 65vw; 
@@ -107,13 +113,14 @@
 .dialoguePart{
 	height:100%; 
 	width: 100%; 
-	border:solid black; 
+	border:solid 3px magenta; 
 	border-width: 3px 3px 3px 0px; 
 	padding: .5em;
-	background-color: mintcream;
+	background-color: black;
+
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
 	.header{
 		width: 50%;
 		height: 5dvh;
@@ -132,7 +139,7 @@
 	}
 	.textBox{
 		flex-direction: column;
-		
+		bottom: 77px;
 		
 	}
 	.dialoguePart{
