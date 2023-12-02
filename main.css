@@ -10,18 +10,20 @@
 	background-attachment: fixed;
 	overflow: auto;
 	}
+.dtext {
+	font-family: "Press Start 2P";
+	color: #0000;
+	font-size: 14px;
+	line-height: 1.5;
+	background:
+	  linear-gradient(-90deg,magenta 5px,#0000 0) 10px 0,
+	  linear-gradient(magenta 0 0) 0 0;
+	background-size:calc(var(--n)*1ch) 200%;
+	-webkit-background-clip:padding-box, text;
+	background-clip:padding-box, text;
+	background-repeat:no-repeat;
+}
 .type {
-			font-family: "Press Start 2P";
-			color: #0000;
-			font-size: 14px;
-			line-height: 1.5;
-			background:
-			  linear-gradient(-90deg,magenta 5px,#0000 0) 10px 0,
-			  linear-gradient(magenta 0 0) 0 0;
-			background-size:calc(var(--n)*1ch) 200%;
-			-webkit-background-clip:padding-box, text;
-			background-clip:padding-box, text;
-			background-repeat:no-repeat;
 			animation: 
 			  b .7s infinite steps(1),   
 			  t calc(var(--n)*.05s) steps(var(--n)) forwards;
@@ -63,7 +65,7 @@
 		}
 .talksprite {
 	transition: ease-out;
-	animation: talk 21s infinite;
+	animation: talk var(--n) infinite;
 	animation-iteration-count: 1;
 }
 
@@ -118,12 +120,23 @@
 	display: inline-block;
 	border:solid 3px magenta; 
 	border-width: 3px 3px 3px 0px; 
-	padding: .5em;
+	padding: 0em .5em .5em .5em;
 	background-color: black;
 
 }
+.closeButton{
+	font-family: 'Silkscreen'; 
+	color: magenta; 
+	cursor: pointer;
+	font-size: 24px;
+	margin: 0px 2px 2px 2px;
+}
 
-@media screen and (max-width: 980px) {
+.closeButton:hover{
+	color: aquamarine;
+}
+
+@media screen and (max-width: 780px) {
 	.header{
 		width: 50%;
 		height: 5dvh;

@@ -4,37 +4,99 @@
 		<title>John Vergil Aparri</title>
 		<link rel="stylesheet" href="main.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
 		
 	</head>
 	<body class="is-preload">
 		<div class="container" height="100vh" width="100vw" style="display: flex; justify-content: center; padding: .2em; flex-direction: column; align-items: center;">
 			<div class="header">
-				<img height="100%" width="55%" src="images/myLogo.gif" at="logo"/>
+				<img height="100%" width="55%" src="images/myLogoBG.gif" at="logo"/>
 			</div>
-			<div class="choicesContainer">
-				<div class="choicebox" onmouseover="newImg('proj', 'images/projectIconH.gif')" onmouseleave="newImg('proj', 'images/projectIcon.gif')" >
+			
+			<!-- Home -->
+			<div id="homeContent" class="choicesContainer">
+				<div class="choicebox" 
+				onmouseover="newImg('proj', 'images/projectIconH.gif')" 
+				onmouseleave="newImg('proj', 'images/projectIcon.gif')" 
+				onclick="navigate('projectContent', 'homeContent', 'aboutContent', 'contactContent')
+				changeDialogue('project')">
 					<img id="proj" height="65%" src="images/projectIcon.gif"/>
 					<span>My Projects</span>
 				</div>
-				<div  class="choicebox" onmouseover="newImg('am', 'images/aboutmeIconH.gif')" onmouseleave="newImg('am', 'images/aboutmeIcon.gif')">
+				<div  class="choicebox" 
+				onmouseover="newImg('am', 'images/aboutmeIconH.gif')" 
+				onmouseleave="newImg('am', 'images/aboutmeIcon.gif')"
+				onclick="navigate('aboutContent', 'homeContent', 'projectContent', 'contactContent')
+				changeDialogue('about')">
 					<img id="am" height="65%" src="images/aboutmeIcon.gif"/>
 					<span>About Me</span>
 				</div>
-				<div class="choicebox"  onmouseover="newImg('cont', 'images/contactIconH.gif')" onmouseleave="newImg('cont', 'images/contactIcon.gif')">
+				<div class="choicebox"  
+				onmouseover="newImg('cont', 'images/contactIconH.gif')" 
+				onmouseleave="newImg('cont', 'images/contactIcon.gif')"
+				onclick="navigate('contactContent', 'homeContent', 'aboutContent', 'projectContent')
+				changeDialogue('contact')">
 					<img id="cont" height="65%" src="images/contactIcon.gif"/>
-					<span>Contact</span>
+					<span>Contact</span>	
+				</div> 
+			</div>
+			<!-- Project -->
+			<div style="display: none; justify-content: left;" id="projectContent" class="choicesContainer">
+				<span
+				style="font-size: 42px;
+				cursor: pointer;
+				font-family: 'Silkscreen';
+				color: aquamarine;
+				margin: 5px;" 
+				onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
+				changeDialogue('home')"
+				> < </span>
+				<h1 style="font-family: 'Press Start 2P'; color: aquamarine;">My Projects</h1>
+				<div class="choicebox" >
+					<img id="proj" height="65%" src="images/projectIcon.gif"/>
 				</div>
 			</div>
+			<!-- About Me -->
+			<div style="display: none;" id="aboutContent" class="choicesContainer">
+				<span class="closeButton" 
+				onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
+				changeDialogue('home')"> < </span>
+				<h1 style="font-family: 'Press Start 2P'; color: aquamarine;">About Me</h1>
+				<div class="choicebox" >
+					<img id="proj" height="65%" src="images/aboutmeIcon.gif"/>
+				</div>
+			</div>
+			<!-- Contact -->
+			<div style="display: none;" id="contactContent" class="choicesContainer">
+				<span class="closeButton" 
+				onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
+				changeDialogue('home')"> < </span>
+				<h1 style="font-family: 'Press Start 2P'; color: aquamarine;">Got a message?</h1>
+				<div class="choicebox" >
+					<img id="proj" height="65%" src="images/contactIcon.gif"/>
+				</div>
+			</div>
+
+			
 			<div class="textBox">
 				<div style="width: 30%;">
-					<img class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="100%" width="100%"/>
+					<img id="me" style="--n:21s" class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="100%" width="100%"/>
 				</div>
 				<div class="dialoguePart">
+					<div style="width: 100%; display: flex; justify-content: end;">
+						<span class="closeButton"> X </span>
+					</div>
+
+
+					<!-- Home Dialogue -->
 					<div style="overflow-y: auto; overflow-x:hidden; max-height: 100%;">
-						<span class="type" style="--n:119">
+						<span id="dialogueContent" class="dtext type" style="--n:119">
 							Hi, I'm John Vergil Aparri, a web developer and game dev hobbyist. Welcome to my portfolio website! How can I help you?
 						</span>
 					</div>
+
+
+
 				</div>
 			</div>
 		</div>
