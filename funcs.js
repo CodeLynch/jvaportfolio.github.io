@@ -19,112 +19,49 @@ function navigate(show, hide1, hide2, hide3){
     hi3.style.display = "none"
 }
 
+function replay(comp, animName){
+
+    comp.className = ""
+    requestAnimationFrame((time) => {
+        requestAnimationFrame((time) => {
+          comp.className = animName;
+        });
+      });
+}
+
 //change dialogue on navigate
 function changeDialogue(page){
     let text = document.getElementById("dialogueContent")
     let portrait = document.getElementById("me")
 
+    //re-trigger avatar animation
+    replay(portrait, "talksprite")
+    //re-trigger text animation  
+    replay(text, "dtext type")
+
+
     if(page === "home"){
-        //re-trigger avatar animation
-        portrait.className = ""
-        requestAnimationFrame((time) => {
-            requestAnimationFrame((time) => {
-              portrait.className = "talksprite";
-            });
-          });
-
-        //re-trigger text animation  
-        text.className = "dtext";
-        requestAnimationFrame((time) => {
-          requestAnimationFrame((time) => {
-            text.className = "dtext type";
-          });
-        });
-
+        
         portrait.style.setProperty('--n', '21s')
         text.style.setProperty('--n', '119')
         text.innerHTML = "Hi, I'm John Vergil Aparri, a web developer and game dev hobbyist. Welcome to my portfolio website! How can I help you?"
     }
     else if(page === "project"){
-        //re-trigger avatar animation
-        portrait.className = ""
-        requestAnimationFrame((time) => {
-            requestAnimationFrame((time) => {
-              portrait.className = "talksprite";
-            });
-          });
-
-        //re-trigger text animation  
-        text.className = "dtext";
-        requestAnimationFrame((time) => {
-          requestAnimationFrame((time) => {
-            text.className = "dtext type";
-          });
-        });
-
         portrait.style.setProperty('--n', '13s')
         text.style.setProperty('--n', '77')
         text.innerHTML = "These are the projects I've worked on, it's not much but it's an honest work."
     }
     else if(page === "about"){
-        //re-trigger avatar animation
-        portrait.className = ""
-        requestAnimationFrame((time) => {
-            requestAnimationFrame((time) => {
-              portrait.className = "talksprite";
-            });
-          });
-
-        //re-trigger text animation  
-        text.className = "dtext";
-        requestAnimationFrame((time) => {
-          requestAnimationFrame((time) => {
-            text.className = "dtext type";
-          });
-        });
-
-        portrait.style.setProperty('--n', '19s')
-        text.style.setProperty('--n', '107')
-        text.innerHTML = "Who am I? You sure you want to know? The story of my life is not for the faint of heart...ok it probably is."
+        portrait.style.setProperty('--n', '15s')
+        text.style.setProperty('--n', '88')
+        text.innerHTML = "Who am I? You sure you want to know? The story of my life is not for the faint of heart."
     }
     else if(page === "contact"){
-        //re-trigger avatar animation
-        portrait.className = ""
-        requestAnimationFrame((time) => {
-            requestAnimationFrame((time) => {
-              portrait.className = "talksprite";
-            });
-          });
-        
-        //re-trigger text animation  
-        text.className = "dtext";
-        requestAnimationFrame((time) => {
-          requestAnimationFrame((time) => {
-            text.className = "dtext type";
-          });
-        });
-
         portrait.style.setProperty('--n', '9s')
         text.style.setProperty('--n', '53')
         text.innerHTML = "This is crazy, so here's my email and hire me maybe?"
     }
-    else{
-        //re-trigger avatar animation
-        portrait.className = ""
-        requestAnimationFrame((time) => {
-            requestAnimationFrame((time) => {
-              portrait.className = "talksprite";
-            });
-          });
-        
-        //re-trigger text animation  
-        text.className = "dtext";
-        requestAnimationFrame((time) => {
-          requestAnimationFrame((time) => {
-            text.className = "dtext type";
-          });
-        });
-
+    else{ 
         portrait.style.setProperty('--n', '15s')
         text.style.setProperty('--n', '119')
         text.innerHTML = "Ok...this is not supposed to happen. You either did something or this is on me..."

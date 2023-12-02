@@ -41,43 +41,91 @@
 				</div> 
 			</div>
 			<!-- Project -->
-			<div style="display: none; justify-content: left;" id="projectContent" class="choicesContainer">
-				<span
-				style="font-size: 42px;
-				cursor: pointer;
-				font-family: 'Silkscreen';
-				color: aquamarine;
-				margin: 5px;" 
-				onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
-				changeDialogue('home')"
-				> < </span>
-				<h1 style="font-family: 'Press Start 2P'; color: aquamarine;">My Projects</h1>
-				<div class="choicebox" >
-					<img id="proj" height="65%" src="images/projectIcon.gif"/>
+			<div class="choicesContainer"
+			style="display: none; justify-content: left; padding: 1em 3em 1em 3em;
+			width: 65vw; height: 50vw; background-image: url('images/boxvert.png');
+			flex-direction: column;"
+			id="projectContent" >
+				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+					<span
+					style="padding-bottom: 7px;"
+					class="backbutton"
+					onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
+					changeDialogue('home')"
+					> < </span>
+					<h2 style="font-family: 'Press Start 2P'; color: aquamarine; margin: 2px;">My Projects</h2>
+				</div>
+				<div>
+					<h4 style="font-family: 'Press Start 2P'; color: aquamarine;">DataMate</h4>
+					<h4 style="font-family: 'Press Start 2P'; color: aquamarine;">2FA-APP</h4>
+					<h4 style="font-family: 'Press Start 2P'; color: aquamarine;">SurvivalPrep</h4>
+					<h4 style="font-family: 'Press Start 2P'; color: aquamarine;">BloodBank Application</h4>
+					<h4 style="font-family: 'Press Start 2P'; color: aquamarine;">Light Speed Gunner</h4>
+				
 				</div>
 			</div>
 			<!-- About Me -->
-			<div style="display: none;" id="aboutContent" class="choicesContainer">
-				<span class="closeButton" 
-				onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
-				changeDialogue('home')"> < </span>
-				<h1 style="font-family: 'Press Start 2P'; color: aquamarine;">About Me</h1>
-				<div class="choicebox" >
-					<img id="proj" height="65%" src="images/aboutmeIcon.gif"/>
+			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 52vh;" id="aboutContent" class="choicesContainer">
+				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
+					<span
+					style="padding-bottom: 7px;"
+					class="backbutton"
+					onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
+					changeDialogue('home')"
+					> < </span>
+					<h2 style="font-family: 'Press Start 2P'; color: aquamarine; margin: 2px; float: left;">About Me</h2>
+				</div>
+				<div style="font-family: 'Press Start 2P'; color: aquamarine;">
+					<h4 style="margin: 1px;">John Vergil Aparri</h4>
+					<p style="margin: 1px; font-size: 12px;">Web Developer</p>
+					<hr>
+					<div>
+					<span style="font-size: 14px;">
+					My name is Walter Hartwell White. I live at 308 Negra Arroyo Lane, Albuquerque, New Mexico, 87104. This is my confession. If you're watching this tape, I'm probably dead– murdered by my brother-in-law, Hank Schrader. Hank has been building a meth empire for over a year now, and using me as his chemist. Shortly after my 50th birthday, he asked that I use my chemistry knowledge to cook methamphetamine...
+					</span>
+					</div>
 				</div>
 			</div>
 			<!-- Contact -->
-			<div style="display: none;" id="contactContent" class="choicesContainer">
-				<span class="closeButton" 
-				onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
-				changeDialogue('home')"> < </span>
-				<h1 style="font-family: 'Press Start 2P'; color: aquamarine;">Got a message?</h1>
-				<div class="choicebox" >
-					<img id="proj" height="65%" src="images/contactIcon.gif"/>
+			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 80vh; justify-content: flex-start;" id="contactContent" class="choicesContainer">
+				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center; flex-direction: row;">
+					<span
+					style="padding-bottom: 7px;"
+					class="backbutton"
+					onclick="navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
+					changeDialogue('home')"
+					> < </span>
+					<h2 style="font-family: 'Press Start 2P'; color: aquamarine; margin: 2px; float: left;">Got a message?</h2>
+				</div>
+				<div style="color: aquamarine; height: 100%;">
+					<form action="#" method="post">
+						<div>
+							<div style="height: 100%" class="row">
+								<div style="width: 40%; margin: .2em;">
+									<input style="width: 100%; background-color: aquamarine;
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="name" placeholder="Name" />
+								</div>
+								<div style="width: 40%; margin: .2em;">
+									<input style="width: 100%; background-color: aquamarine;
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="email" placeholder="Email" />
+								</div>
+								<div style="width: 40%; margin: .2em;">
+									<input style="width: 100%; background-color: aquamarine;
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="subject" placeholder="Subject" />
+								</div>
+								<div style="margin: .2em;" class="col-12">
+									<textarea style="resize: none; width: 50%; background-color: aquamarine;
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" name="message" placeholder="Message" rows="5"></textarea>
+								</div>
+								<div style="width: 49.5%; margin: .2em; display: flex; justify-content: end;">
+									<input class="sendbutton" type="submit" value="Send Message" />
+								</div>
+							</div>
+						</div>
 				</div>
 			</div>
 
-			
+
 			<div class="textBox">
 				<div style="width: 30%;">
 					<img id="me" style="--n:21s" class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="100%" width="100%"/>
@@ -89,7 +137,7 @@
 
 
 					<!-- Home Dialogue -->
-					<div style="overflow-y: auto; overflow-x:hidden; max-height: 100%;">
+					<div style="overflow-x:hidden; max-height: 100%;">
 						<span id="dialogueContent" class="dtext type" style="--n:119">
 							Hi, I'm John Vergil Aparri, a web developer and game dev hobbyist. Welcome to my portfolio website! How can I help you?
 						</span>
