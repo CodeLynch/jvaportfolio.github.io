@@ -68,5 +68,11 @@ function changeDialogue(page){
     }
 }
 
+function closeDialogueBox(){
+    let box = document.getElementById("dialogueBox")
+
+    box.style.display = "none"
+}
+
 
 
