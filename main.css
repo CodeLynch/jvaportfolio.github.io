@@ -84,7 +84,7 @@
 }
 .choicesContainer{
 	margin: 2px;
-	background-image: url(images/box.png);
+	background-image: url(images/boxhori.png);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	display: flex; 
@@ -160,6 +160,13 @@
 .sendbutton:hover{
 	background-color: hotpink;
 	color:blue;
+}
+
+.notifButton{
+	cursor: pointer;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
 }
 @media screen and (max-width: 720px) {
 	.header{

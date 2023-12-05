@@ -43,7 +43,7 @@
 			<!-- Project -->
 			<div class="choicesContainer"
 			style="display: none; justify-content: left; padding: 1em 3em 1em 3em;
-			width: 65vw; height: 50vw; background-image: url('images/boxvert.png');
+			height: 120vh; background-image: url('images/boxhorilarge.png');
 			flex-direction: column;"
 			id="projectContent" >
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
@@ -65,7 +65,8 @@
 				</div>
 			</div>
 			<!-- About Me -->
-			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 52vh;" id="aboutContent" class="choicesContainer">
+			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 100vh;
+			background-image: url(images/boxhorilarge.png); justify-content: flex-start;" id="aboutContent" class="choicesContainer">
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
 					<span
 					style="padding-bottom: 7px;"
@@ -88,7 +89,7 @@
 			</div>
 			<!-- Contact -->
 			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 77vh; justify-content: flex-start;
-			background-image: url(images/boxhori.png);" id="contactContent" class="choicesContainer">
+			background-image: url(images/boxhorimed.png);" id="contactContent" class="choicesContainer">
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center; flex-direction: row;">
 					<span
 					style="padding-bottom: 7px;"
@@ -133,9 +134,9 @@
 
 			<div id="dialogueBox" class="textBox">
 				<div style="width: 30%;">
-					<img id="me" style="--n:21s" class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="100%" width="100%"/>
+					<img id="me" style="--n:21s" class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
 				</div>
-				<div class="dialoguePart">
+				<div class="dialoguePart" style="height: 149px;">
 					<div style="width: 100%; display: flex; justify-content: end;">
 						<span class="closeButton" onclick="closeDialogueBox()"> X </span>
 					</div>
@@ -152,8 +153,11 @@
 
 				</div>
 			</div>
+			
 		</div>
-
+			<div class="notifButton" >
+				<img src="images/notif.gif"/>
+			</div>
 
 
 
