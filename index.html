@@ -15,30 +15,32 @@
 			
 			<!-- Home -->
 			<div id="homeContent" class="choicesContainer">
-				<div class="choicebox" 
-				onmouseover="newImg('proj', 'images/projectIconH.gif')" 
-				onmouseleave="newImg('proj', 'images/projectIcon.gif')" 
-				onclick="navigate('projectContent', 'homeContent', 'aboutContent', 'contactContent')
-				changeDialogue('project')">
-					<img id="proj" height="65%" src="images/projectIcon.gif"/>
-					<span>My Projects</span>
+				<div style="padding: 3em; display: flex; flex-direction: row; width: 100%; justify-content: center;" >
+					<div class="choicebox" 
+					onmouseover="newImg('proj', 'images/projectIconH.gif')" 
+					onmouseleave="newImg('proj', 'images/projectIcon.gif')" 
+					onclick="navigate('projectContent', 'homeContent', 'aboutContent', 'contactContent')
+					changeDialogue('project')">
+						<img id="proj" height="65%" src="images/projectIcon.gif"/>
+						<span>My Projects</span>
+					</div>
+					<div  class="choicebox" 
+					onmouseover="newImg('am', 'images/aboutmeIconH.gif')" 
+					onmouseleave="newImg('am', 'images/aboutmeIcon.gif')"
+					onclick="navigate('aboutContent', 'homeContent', 'projectContent', 'contactContent')
+					changeDialogue('about')">
+						<img id="am" height="65%" src="images/aboutmeIcon.gif"/>
+						<span>About Me</span>
+					</div>
+					<div class="choicebox"  
+					onmouseover="newImg('cont', 'images/contactIconH.gif')" 
+					onmouseleave="newImg('cont', 'images/contactIcon.gif')"
+					onclick="navigate('contactContent', 'homeContent', 'aboutContent', 'projectContent')
+					changeDialogue('contact')">
+						<img id="cont" height="65%" src="images/contactIcon.gif"/>
+						<span>Contact</span>	
+					</div> 
 				</div>
-				<div  class="choicebox" 
-				onmouseover="newImg('am', 'images/aboutmeIconH.gif')" 
-				onmouseleave="newImg('am', 'images/aboutmeIcon.gif')"
-				onclick="navigate('aboutContent', 'homeContent', 'projectContent', 'contactContent')
-				changeDialogue('about')">
-					<img id="am" height="65%" src="images/aboutmeIcon.gif"/>
-					<span>About Me</span>
-				</div>
-				<div class="choicebox"  
-				onmouseover="newImg('cont', 'images/contactIconH.gif')" 
-				onmouseleave="newImg('cont', 'images/contactIcon.gif')"
-				onclick="navigate('contactContent', 'homeContent', 'aboutContent', 'projectContent')
-				changeDialogue('contact')">
-					<img id="cont" height="65%" src="images/contactIcon.gif"/>
-					<span>Contact</span>	
-				</div> 
 			</div>
 			<!-- Project -->
 			<div class="choicesContainer"
@@ -82,7 +84,9 @@
 					<hr>
 					<div>
 					<span style="font-size: 14px;">
-					My name is Walter Hartwell White. I live at 308 Negra Arroyo Lane, Albuquerque, New Mexico, 87104. This is my confession. If you're watching this tape, I'm probably dead– murdered by my brother-in-law, Hank Schrader. Hank has been building a meth empire for over a year now, and using me as his chemist. Shortly after my 50th birthday, he asked that I use my chemistry knowledge to cook methamphetamine...
+					I'm a full-stack web developer who does some game development as a hobby. I've always found creating things satisfying and fun which is why I have such a passion for designing, animating, and coding. I'm a bit of a perfectionist as I make sure the quality of my work is somethign I'm satisfied with and I dedicate a lot of time to ideas which I really love.<br><br><br>
+
+					I'm knowledgeable and used the following frameworks and tools in my college projects: 
 					</span>
 					</div>
 				</div>
@@ -134,7 +138,7 @@
 
 			<div id="dialogueBox" class="textBox">
 				<div style="width: 30%;">
-					<img id="me" style="--n:21s" class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
+					<img id="me" style="--n:14s" class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
 				</div>
 				<div class="dialoguePart" style="height: 149px;">
 					<div style="width: 100%; display: flex; justify-content: end;">
@@ -144,8 +148,8 @@
 
 					<!-- Home Dialogue -->
 					<div style="overflow-x:hidden; max-height: 100%;">
-						<span id="dialogueContent" class="dtext type" style="--n:119">
-							Hi, I'm John Vergil Aparri, a web developer and game dev hobbyist. Welcome to my portfolio website! How can I help you?
+						<span id="dialogueContent" class="dtext type" style="--n:80">
+							Hi, I'm John Vergil Aparri. Welcome to my portfolio website! How can I help you?
 						</span>
 					</div>
 
@@ -153,12 +157,22 @@
 
 				</div>
 			</div>
-			
+		<footer class="footer">
+			&copy;2023 
+			<img src="images/myLogoMini.png" style="margin: 0 .5em 0 .5em;" height="20px" width="75px" />
+		</footer>
 		</div>
-			<div class="notifButton" >
-				<img src="images/notif.gif"/>
-			</div>
 
+		<div class="notifButton" 
+		id="SideIcon"
+		style="display: none;"
+		onclick="openDialogueBox()"
+		onmouseover="newImg('mini_me', 'images/notifH.gif')"
+		onmouseleave="newImg('mini_me', 'images/notif.gif')">
+			<img id="mini_me" style="margin: .5em;" src="images/notif.gif"  />
+		</div>
+
+		
 
 
 		<!-- Scripts -->

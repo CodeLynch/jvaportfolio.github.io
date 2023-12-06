@@ -42,9 +42,9 @@ function changeDialogue(page){
 
     if(page === "home"){
         
-        portrait.style.setProperty('--n', '21s')
-        text.style.setProperty('--n', '119')
-        text.innerHTML = "Hi, I'm John Vergil Aparri, a web developer and game dev hobbyist. Welcome to my portfolio website! How can I help you?"
+        portrait.style.setProperty('--n', '14s')
+        text.style.setProperty('--n', '80')
+        text.innerHTML = "Hi, I'm John Vergil Aparri. Welcome to my portfolio website! How can I help you?"
     }
     else if(page === "project"){
         portrait.style.setProperty('--n', '13s')
@@ -70,9 +70,21 @@ function changeDialogue(page){
 
 function closeDialogueBox(){
     let box = document.getElementById("dialogueBox")
+    let icon = document.getElementById("SideIcon")
+    let home = document.getElementById("homeContent")
 
-    box.style.display = "none"
+    home.style.height = "70vh"
+    icon.style.display = "block"
+    box.style.display = "none"    
 }
 
+function openDialogueBox(){
+    let box = document.getElementById("dialogueBox")
+    let icon = document.getElementById("SideIcon")
+    let home = document.getElementById("homeContent")
 
+    home.style.height = "50vh"
+    icon.style.display = "none"
+    box.style.display = "flex"    
+}
 

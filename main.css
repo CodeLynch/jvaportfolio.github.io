@@ -54,13 +54,22 @@
 			bottom: .1;
 			animation: fly 1s ease-out;
 			
-		   }
-		@keyframes fly {
+}
+@keyframes fly {
 			0%   { 
 			transform: translateY(200%); 		
 			}
 			100% { 
 			transform: translateY(0%); 
+			}
+		}
+
+@keyframes slide {
+			0%   { 
+			transform: translateX(-200%); 		
+			}
+			100% { 
+			transform: translateX(0%); 
 			}
 		}
 .talksprite {
@@ -101,7 +110,8 @@
 	flex-direction: column; 
 	height: 80%; 
 	justify-content: center; 
-	margin: 2em;
+	margin: .5em;
+	width: 20vw;
 	span {
 		color: rgb(0,255,172); 
 		font-family: 'Press Start 2P'; 
@@ -164,9 +174,21 @@
 
 .notifButton{
 	cursor: pointer;
-	position: absolute;
-	left: 0px;
-	bottom: 0px;
+	position: fixed;
+	left: -12px;
+	bottom: 4px;
+	animation: slide .5s ease-out;;
+}
+
+.footer{
+	bottom: 0;
+	color: white;
+	font-family: 'Silkscreen';
+	display: flex;
+	justify-content: end;
+	width: 67.5%;
+	margin: 0;
+	flex-grow: 1;
 }
 @media screen and (max-width: 720px) {
 	.header{
