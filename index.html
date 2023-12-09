@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="main.css" />
 		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet"> 
+		<meta name="viewport" content="width=device-width" />
 		
 	</head>
 	<body class="is-preload">
@@ -22,7 +23,7 @@
 					onclick="navigate('projectContent', 'homeContent', 'aboutContent', 'contactContent')
 					changeDialogue('project')">
 						<img id="proj" height="65%" src="images/projectIcon.gif"/>
-						<span style="font-family: Press Start 2P;">My Projects</span>
+						<span class="homeLabels">My Projects</span>
 					</div>
 					<div  class="choicebox" 
 					onmouseover="newImg('am', 'images/aboutmeIconH.gif')" 
@@ -30,7 +31,7 @@
 					onclick="navigate('aboutContent', 'homeContent', 'projectContent', 'contactContent')
 					changeDialogue('about')">
 						<img id="am" height="65%" src="images/aboutmeIcon.gif"/>
-						<span style="font-family: Press Start 2P;" >About Me</span>
+						<span class="homeLabels">About Me</span>
 					</div>
 					<div class="choicebox"  
 					onmouseover="newImg('cont', 'images/contactIconH.gif')" 
@@ -38,7 +39,7 @@
 					onclick="navigate('contactContent', 'homeContent', 'aboutContent', 'projectContent')
 					changeDialogue('contact')">
 						<img id="cont" height="65%" src="images/contactIcon.gif"/>
-						<span style="font-family: Press Start 2P;">Contact</span>	
+						<span class="homeLabels">Contact</span>	
 					</div> 
 				</div>
 			</div>
@@ -83,7 +84,7 @@
 					<p style="margin: 1px; font-size: 12px;">Web Developer</p>
 					<hr>
 					<div>
-					<span style="font-size: 14px; text-align: justify; display: block; line-height: 1.5em;">
+					<span class="aboutMeText">
 					I'm a <span class="cycle animated highlight" >full-stack web developer</span> who does some <span class="highlight">game development</span> as a hobby. I've always found creating things satisfying and fun which is why I have a passion for <span class="highlight""> designing, animating, and coding.</span> I'm a bit of a 
 					<span class="highlight">perfectionist </span> as I make sure the quality of my work is something I'm satisfied with and I dedicate a lot of time to ideas I really love.<br><br><br>
 					I'm knowledgeable and used the following  <span class="highlight">frameworks and tools </span>in my college projects: 
@@ -127,7 +128,7 @@
 				</div>
 			</div>
 			<!-- Contact -->
-			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 77vh; justify-content: flex-start;
+			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 75vh; justify-content: flex-start;
 			background-image: url(images/boxhorimed.png);" id="contactContent" class="choicesContainer">
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center; flex-direction: row;">
 					<span
@@ -192,8 +193,14 @@
 				</div>
 			</div>
 		<footer class="footer">
-			&copy;2023 
-			<img src="images/myLogoMini.png" style="margin: 0 .5em 0 .5em;" height="20px" width="75px" />
+			<div style="display: flex; flex-direction: column;">
+				<span style="font-size: 8px;">&copy;2023 John Vergil Aparri</span>
+				<div style="display: flex; justify-content: end;">
+					<a href="https://github.com/CodeLynch" target="_blank" style="margin: 0 .2em"><img src="images/github.png" height="14px" width="14px" /></a>
+					<a href="https://ph.linkedin.com/in/john-vergil-aparri-0056b4214" target="_blank" style="margin: 0 .2em"><img src="images/linkedin.png" height="14px" width="14px" /></a>
+				</div>
+			</div>
+			<img src="images/myLogoMini.png" style="margin: 0 .5em 0 .5em;" height="22px" width="75px" />
 		</footer>
 		</div>
 

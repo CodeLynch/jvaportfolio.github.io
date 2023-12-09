@@ -113,6 +113,7 @@
 	justify-content: center;
 }
 
+
 .choicebox {
 	display: flex; 
 	align-items: center; 
@@ -121,11 +122,18 @@
 	justify-content: center; 
 	margin: .5em;
 	width: 20vw;
-	span {
-		color: rgb(0,255,172); 
-		font-family: 'Press Start 2P'; 
-		margin: .5em;
-	}
+}
+
+.choicebox > span{
+	color: rgb(0,255,172); 
+	font-family: 'Press Start 2P'; 
+	margin: .5em;
+}
+
+.homeLabels {
+	color: rgb(0,255,172); 
+	font-family: 'Press Start 2P'; 
+	margin: .5em;
 }
 
 .choicebox:hover{
@@ -222,6 +230,13 @@
 	align-items: center;
   }
 
+.aboutMeText{
+	font-size: 14px;
+	text-align: justify; 
+	display: block; 
+	line-height: 1.5em;
+}
+
 .toolContainer{
 	display: flex;
 	height: 100px;
@@ -267,21 +282,21 @@
 	100% { color: hsl(310, 90%, 65%)}
   }
 
-@media screen and (max-width: 920px) {
+  @media  all and (max-width:810px),
+  screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px),
+  screen and (-webkit-min-device-pixel-ratio: 2.0) and (max-width: 720px) {
 	.header{
-		width: 50%;
-		height: 5dvh;
+		width: 75%;
+		height: 10dvh;
 	}
 	
 	#mailImg{
 		height: 225px;
 		width: 150px;
 	}
-
 	.choicesContainer{
 	  width: 85vw;
 	}
-
 	.contentWrapper {
 	  flex-direction: column;
 	  align-items: center;
@@ -325,6 +340,43 @@
 		height: 105%;
 		width: 105%;
 	}
+
+	.toolContainer{
+		display: flex;
+		height: 70px;
+		width: 70px;
+		img{
+			height: 50px;
+			width: 50px;
+		}
+		p{
+			font-size: 5px;
+		}
+		align-items: center;
+		flex-direction: column;
+		margin: .5em;
+	}
+
+	.aboutMeText{
+		font-size: 8px;
+	}
+
+	.grid-container {
+		width: 100%;
+		display: grid;
+		grid-template-columns: auto auto;
+		box-sizing: border-box;
+		justify-content: center;
+		justify-items: center;
+		align-content: center;
+		align-items: center;
+	}
+	.footer{
+		width: 95%;
+	}
+	
+
+	
 
   }
 
