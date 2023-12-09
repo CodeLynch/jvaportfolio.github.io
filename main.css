@@ -102,6 +102,7 @@
 	padding: .5em; 
 	justify-content: center;
 	flex-direction: row;
+	overflow: hidden;
 }
 
 .contentWrapper{
@@ -134,7 +135,7 @@
 	}
 }
 .dialoguePart{
-	width: 90%;
+	width: 100%;
 	display: inline-block;
 	border:solid 3px magenta; 
 	border-width: 3px 3px 3px 0px; 
@@ -205,11 +206,68 @@
 	width: 100%; 
 	justify-content: space-between;
 }
+
 #mailImg{
 	height: 325px;
 	width: 217px;
 }
-@media screen and (max-width: 820px) {
+.grid-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	box-sizing: border-box;
+	justify-content: space-evenly;
+	justify-items: center;
+	align-content: space-evenly;
+	align-items: center;
+  }
+
+.toolContainer{
+	display: flex;
+	height: 100px;
+	width: 100px;
+	img{
+		height: 80px;
+		width: 80px;
+	}
+	p{
+		font-size: 12px;
+	}
+	align-items: center;
+	flex-direction: column;
+	margin: .5em;
+}
+
+.highlight{
+	color: rgb(255, 0, 166); 
+	font-weight: bolder;
+}
+
+.cycle .char { 
+  
+	color: hsl(
+	  calc(360deg * var(--char-percent)
+	  ), 
+	  90%, 
+	  65%
+	);
+   
+  }
+  
+  .cycle .animated .char {
+	animation: cycle-anim 2s linear infinite;
+	animation-delay: calc(-2s * var(--char-percent));
+  }
+  
+  @keyframes cycle-anim {
+	0% { color: hsl(59, 97%, 66%); }
+	25% { color: hsl(0, 0%, 100%); }
+	50% { color: hsl(195, 84%, 81%); }
+	75% { color: hsl(268, 90%, 65%); }
+	100% { color: hsl(310, 90%, 65%)}
+  }
+
+@media screen and (max-width: 920px) {
 	.header{
 		width: 50%;
 		height: 5dvh;

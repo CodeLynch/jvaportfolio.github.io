@@ -22,7 +22,7 @@
 					onclick="navigate('projectContent', 'homeContent', 'aboutContent', 'contactContent')
 					changeDialogue('project')">
 						<img id="proj" height="65%" src="images/projectIcon.gif"/>
-						<span>My Projects</span>
+						<span style="font-family: Press Start 2P;">My Projects</span>
 					</div>
 					<div  class="choicebox" 
 					onmouseover="newImg('am', 'images/aboutmeIconH.gif')" 
@@ -30,7 +30,7 @@
 					onclick="navigate('aboutContent', 'homeContent', 'projectContent', 'contactContent')
 					changeDialogue('about')">
 						<img id="am" height="65%" src="images/aboutmeIcon.gif"/>
-						<span>About Me</span>
+						<span style="font-family: Press Start 2P;" >About Me</span>
 					</div>
 					<div class="choicebox"  
 					onmouseover="newImg('cont', 'images/contactIconH.gif')" 
@@ -38,7 +38,7 @@
 					onclick="navigate('contactContent', 'homeContent', 'aboutContent', 'projectContent')
 					changeDialogue('contact')">
 						<img id="cont" height="65%" src="images/contactIcon.gif"/>
-						<span>Contact</span>	
+						<span style="font-family: Press Start 2P;">Contact</span>	
 					</div> 
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 				</div>
 			</div>
 			<!-- About Me -->
-			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 100vh;
+			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 120vh;
 			background-image: url(images/boxhorilarge.png); justify-content: flex-start;" id="aboutContent" class="choicesContainer">
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
 					<span
@@ -83,12 +83,47 @@
 					<p style="margin: 1px; font-size: 12px;">Web Developer</p>
 					<hr>
 					<div>
-					<span style="font-size: 14px;">
-					I'm a full-stack web developer who does some game development as a hobby. I've always found creating things satisfying and fun which is why I have such a passion for designing, animating, and coding. I'm a bit of a perfectionist as I make sure the quality of my work is somethign I'm satisfied with and I dedicate a lot of time to ideas which I really love.<br><br><br>
-
-					I'm knowledgeable and used the following frameworks and tools in my college projects: 
+					<span style="font-size: 14px; text-align: justify; display: block; line-height: 1.5em;">
+					I'm a <span class="cycle animated highlight" >full-stack web developer</span> who does some <span class="highlight">game development</span> as a hobby. I've always found creating things satisfying and fun which is why I have a passion for <span class="highlight""> designing, animating, and coding.</span> I'm a bit of a 
+					<span class="highlight">perfectionist </span> as I make sure the quality of my work is something I'm satisfied with and I dedicate a lot of time to ideas I really love.<br><br><br>
+					I'm knowledgeable and used the following  <span class="highlight">frameworks and tools </span>in my college projects: 
 					</span>
 					</div>
+					<div class="grid-container">
+						<div class="toolContainer">
+							<img src="images/expressjs.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">ExpressJs</p>
+						</div>
+						<div class="toolContainer">
+							<img src="images/nodejs.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">NodeJs</p>
+						</div>
+						<div class="toolContainer">
+							<img src="images/springboot.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">Springboot</p>
+						</div>
+						<div class="toolContainer">
+							<img src="images/django.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">Django</p>
+						</div>
+						<div class="toolContainer">
+							<img src="images/react.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">React</p>
+						</div>
+						<div class="toolContainer">
+							<img src="images/git.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">Git</p>
+						</div>
+						<div class="toolContainer">
+							<img src="images/anaconda.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">Anaconda</p>
+						</div>
+						<div class="toolContainer">
+							<img src="images/postgresql.png"/>
+							<p style="font-family: Silkscreen; margin: 0px;">PostgreSQL</p>
+						</div>
+					</div>
+
 				</div>
 			</div>
 			<!-- Contact -->
@@ -137,14 +172,13 @@
 
 
 			<div id="dialogueBox" class="textBox">
-				<div style="width: 30%;">
+				<div style="width: 30%; display:flex; justify-content: end;">
 					<img id="me" style="--n:14s" class="talksprite" src="images/meportraitIdle.gif" alt="portrait" height="149px" width="170px"/>
 				</div>
 				<div class="dialoguePart" style="height: 149px;">
 					<div style="width: 100%; display: flex; justify-content: end;">
 						<span class="closeButton" onclick="closeDialogueBox()"> X </span>
 					</div>
-
 
 					<!-- Home Dialogue -->
 					<div style="overflow-x:hidden; max-height: 100%;">

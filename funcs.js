@@ -87,4 +87,3 @@ function openDialogueBox(){
     icon.style.display = "none"
     box.style.display = "flex"    
 }
-
