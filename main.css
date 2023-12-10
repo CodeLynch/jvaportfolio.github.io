@@ -254,8 +254,51 @@
 }
 
 .highlight{
-	color: rgb(255, 0, 166); 
-	font-weight: bolder;
+	color: rgb(255, 75, 192); 
+}
+.projectLink{
+	color: aquamarine;
+	font-family: 'Silkscreen';
+	font-size: 10px;
+	text-decoration: none;
+	margin: .2em;
+	display: flex;
+	flex-shrink: 1;
+}
+
+.projectLink .icons img:first-child{
+	display: block;
+	margin: .3em;
+}
+.projectLink .icons img:last-child{
+	display: none;
+	
+}
+.projectLink:hover{
+	color: rgb(255, 75, 192);
+	.icons img:first-child{
+		display: none;
+	}
+	.icons img:last-child{
+		display: block;
+		margin: .3em;
+	}
+}
+
+.projectHeader{
+	display: flex;
+	flex-direction: row;
+	margin: .2em;
+	justify-content: space-between;
+}
+
+.projectDesc{
+	font-family: 'Press Start 2P'; 
+	color: aquamarine; 
+	margin: .2em; 
+	font-size: 10px; 
+	line-height: 1.5em; 
+	text-align: justify;
 }
 
 .cycle .char { 
@@ -358,7 +401,7 @@
 	}
 
 	.aboutMeText{
-		font-size: 8px;
+		font-size: 12px;
 	}
 
 	.grid-container {
@@ -366,9 +409,9 @@
 		display: grid;
 		grid-template-columns: auto auto;
 		box-sizing: border-box;
-		justify-content: center;
+		justify-content: space-evenly;
 		justify-items: center;
-		align-content: center;
+		align-content: space-evenly;
 		align-items: center;
 	}
 	.footer{
