@@ -319,6 +319,14 @@
 	border-image: url(images/borderimg2.png) 25 round;
 }
 
+.aboutMeImg {
+	height:200px; 
+	width:200px;
+	border: 10px solid transparent;
+	background-color: black;
+	border-image: url(images/borderimg2.png) 25 round;
+}
+
 .thankYouMsg{
 	background-color: #000000;
 	border: 2px solid magenta;
@@ -331,6 +339,13 @@
 	text-align: center;
 	padding: .1em;
 	
+}
+
+.aboutMeHeader{
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-between; 
+	align-items: end;
 }
 .cycle .char { 
   
@@ -466,6 +481,13 @@
 	.projectDesc{
 		font-size: 8px;
 		text-align: left;
+	}
+
+	.aboutMeHeader{
+		display: flex; 
+		flex-direction: column; 
+		justify-content: space-between; 
+		align-items: end;
 	}
 	
 
