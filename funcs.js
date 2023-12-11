@@ -87,3 +87,37 @@ function openDialogueBox(){
     icon.style.display = "none"
     box.style.display = "flex"    
 }
+
+function checkform(form) {
+    // get all the inputs within the submitted form
+    var inputs = form.getElementsByTagName('input');
+    for (var i = 0; i < inputs.length; i++) {
+        // only validate the inputs that have the required attribute
+        if(inputs[i].hasAttribute("required")){
+            if(inputs[i].value == ""){
+                // found an empty field that is required
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function closeMessage(){
+    let msg = document.getElementById("ty")
+    
+    msg.style.display = "none"    
+}
+
+function openMessage(){
+    let msg = document.getElementById("ty")
+    let frm = document.getElementById("msgForm")
+
+    if(checkform(frm)){
+        frm.submit();
+        frm.reset();
+        navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
+		changeDialogue('home')
+        msg.style.display = "block"
+    } 
+}

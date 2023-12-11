@@ -93,8 +93,10 @@
 }
 .choicesContainer{
 	margin: 2px;
-	background-image: url(images/boxhori.png);
-	background-repeat: no-repeat;
+	border: 10px solid transparent;
+	background-color: black;
+	border-image: url(images/borderimg.png) 25 round;
+	border-radius: 25px;
 	background-size: 100% 100%;
 	display: flex; 
 	height: 50vh; 
@@ -301,6 +303,35 @@
 	text-align: justify;
 }
 
+.projectImgs{
+	display: flex; 
+	flex-direction: row; 
+	justify-content: space-evenly; 
+	margin: .3em;
+}
+
+.projectImgs > img{
+	height:170px;
+	width: 340px;
+	margin: 3px;
+	border: 10px solid transparent;
+	background-color: black;
+	border-image: url(images/borderimg2.png) 25 round;
+}
+
+.thankYouMsg{
+	background-color: #000000;
+	border: 2px solid magenta;
+	color: magenta;
+	position: absolute;
+	font-family: 'Press Start 2P';
+	top: 50%;
+  	left: 50%;
+ 	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: .1em;
+	
+}
 .cycle .char { 
   
 	color: hsl(
@@ -372,7 +403,7 @@
 	.dialoguePart{
 		border-width: 3px 3px 3px 3px; 
 		font-size: 8px;
-		max-height: 90%;
+		height: auto;
 		width: 100%;
 		overflow-y: auto;
 	}
@@ -402,6 +433,7 @@
 
 	.aboutMeText{
 		font-size: 12px;
+		text-align: left;
 	}
 
 	.grid-container {
@@ -416,6 +448,24 @@
 	}
 	.footer{
 		width: 95%;
+	}
+	.projectHeader{
+		display: flex; 
+		flex-direction: column;
+	}
+	.projectImgs{
+		display: flex; 
+		flex-direction: column; 
+		margin: .3em;
+	}
+	.projectImgs > img{
+		height:90px;
+		width:190px;
+	}
+
+	.projectDesc{
+		font-size: 8px;
+		text-align: left;
 	}
 	
 

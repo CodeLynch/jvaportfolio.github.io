@@ -46,7 +46,7 @@
 			<!-- Project -->
 			<div class="choicesContainer"
 			style="display: none; justify-content: left; padding: 1em 3em 1em 3em;
-			height: auto; background-image: url('images/boxhorilarge.png');
+			height: auto;
 			flex-direction: column;"
 			id="projectContent" >
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
@@ -92,9 +92,9 @@
 							A Group effort, this is a <span class="highlight"> React application</span> with a <span class="highlight">Springboot backend</span>. <span class="highlight">DataMate</span> is meant to help <span class="highlight">MSMEs (Micro Small Medium Enterprises)</span> transition from using logbooks and spreadsheets to a secure database and manage their data efficiently.
 						</p>
 						
-						<div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: .3em;">
-							<img src="images/DataMate/DMHome.PNG" height="170px" width="340px">
-							<img src="images/DataMate/DMLogin.PNG" height="170px" width="340px"> 
+						<div class="projectImgs">
+							<img src="images/DataMate/DMHome.PNG" >
+							<img src="images/DataMate/DMLogin.PNG" > 
 						</div>
 					</div>
 					
@@ -123,9 +123,9 @@
 							A simple solo project all that implements <span class="highlight">two-factor authentication</span>. Made with <span class="highlight">React</span> for the frontend and used <span class="highlight">ExpressJs</span> for the backend. I also played around with <span class="highlight">CSS</span> in this project. 
 						</p>
 						
-						<div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: .3em;">
-							<img src="images/2FA-App/2Flogin.PNG" height="170px" width="340px">
-							<img src="images/2FA-App/2Fotp.PNG" height="170px" width="340px"> 
+						<div class="projectImgs">
+							<img src="images/2FA-App/2Flogin.PNG" >
+							<img src="images/2FA-App/2Fotp.PNG" > 
 						</div>
 					</div>
 
@@ -161,9 +161,9 @@
 							This is my first group project using <span class="highlight"> React </span> and <span class="highlight">Springboot</span> as frontend and backend respectively. <span class="highlight">SurvivalPrep</span> centralizes the discussions within a community in order to prepare and recover from natural disasters by allowing users to create threads and posts so they can stay updated and have a platform to ask for assistance. 
 						</p>
 						
-						<div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: .3em;">
-							<img src="images/SurvivalPrep/SPlogin.PNG" height="170px" width="340px">
-							<img src="images/SurvivalPrep/SPthread.PNG" height="170px" width="340px"> 
+						<div class="projectImgs">
+							<img src="images/SurvivalPrep/SPlogin.PNG">
+							<img src="images/SurvivalPrep/SPthread.PNG"> 
 						</div>
 					</div>
 
@@ -191,9 +191,9 @@
 							A group project made with <span class="highlight"> Django</span>. <span class="highlight">OneBlood</span> is a bloodbank management system so it mostly focuses on <span class="highlight">CRUD</span> functions for blood donors, receivers, blood banks, and hospitals. 
 						</p>
 						
-						<div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: .3em;">
-							<img src="images/pic07.jpg" height="170px" width="340px">
-							<img src="images/pic07.jpg" height="170px" width="340px"> 
+						<div class="projectImgs">
+							<img src="images/OneBlood/login.PNG">
+							<img src="images/OneBlood/request.PNG"> 
 						</div>
 					</div>
 
@@ -222,17 +222,16 @@
 							A retro cyberpunk platformer that I'm currently making on <span class="highlight">Unity</span>, This is a <span class="highlight">passion project</span> that I've started way back in 2020 during the pandemic as my first ever <span class="highlight"> game dev project</span>. I've been working on and off it since then and it's about 80-90% complete.	
 						</p>
 						
-						<div style="display: flex; flex-direction: row; justify-content: space-evenly; margin: .3em;">
-							<img src="images/LSG/title.gif" height="170px" width="340px">
-							<img src="images/LSG/select.gif" height="170px" width="340px"> 
+						<div class="projectImgs">
+							<img src="images/LSG/title.gif" >
+							<img src="images/LSG/select.gif" > 
 						</div>
 					</div>
 				
 				</div>
 			</div>
 			<!-- About Me -->
-			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: auto;
-			background-image: url(images/boxhorilarge.png); justify-content: flex-start;" id="aboutContent" class="choicesContainer">
+			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: auto; justify-content: flex-start;" id="aboutContent" class="choicesContainer">
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center;">
 					<span
 					style="padding-bottom: 7px;"
@@ -290,9 +289,9 @@
 
 				</div>
 			</div>
+
 			<!-- Contact -->
-			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 75vh; justify-content: flex-start;
-			background-image: url(images/boxhorimed.png);" id="contactContent" class="choicesContainer">
+			<div style="display: none; flex-direction: column; padding: 1em 3em 1em 3em; height: 75vh; justify-content: flex-start;" id="contactContent" class="choicesContainer">
 				<div style="display: flex; width: 100%; justify-content: space-between; align-items: center; flex-direction: row;">
 					<span
 					style="padding-bottom: 7px;"
@@ -304,26 +303,26 @@
 				</div>
 				<div class="contactContentWrapper">
 					<div style="color: aquamarine; height: 100%; width: 100%;">
-					<form style="height: 100%;" action="#" method="post">
+					<form target="_blank" id="msgForm" style="height: 100%;" action="https://formspree.io/f/mnqkeorr" method="POST">
 						<div style="width: 100%; height: 100%;">
 								<div style="width: 80%; margin: .2em;">
 									<input style="width: 100%; background-color: aquamarine;
-									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="name" placeholder="Name" />
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="name" placeholder="Name"  />
 								</div>
 								<div style="width: 80%; margin: .2em;">
 									<input style="width: 100%; background-color: aquamarine;
-									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="email" placeholder="Email" />
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="email" placeholder="Email"  />
 								</div>
 								<div style="width: 80%; margin: .2em;">
 									<input style="width: 100%; background-color: aquamarine;
-									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="subject" placeholder="Subject" />
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px;" type="text" name="subject" placeholder="Subject"/>
 								</div>
 								<div style="margin: .2em; height: 65%;" >
 									<textarea style="resize: none; width: 90%; background-color: aquamarine;
-									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px; height: 100%;" name="message" placeholder="Message" rows="5"></textarea>
+									font-family: 'Press Start 2P'; border: 0px; padding: .5em; font-size: 10px; height: 100%;" name="message" placeholder="Message" rows="5" ></textarea>
 								</div>
 								<div style="width: 89%; margin: .2em; display: flex; justify-content: end;">
-									<input class="sendbutton" type="submit" value="Send Message" />
+									<input class="sendbutton" type="button" value="Send Message" onclick="openMessage()" />
 								</div>
 						</div>
 					</div>
@@ -376,8 +375,16 @@
 			<img id="mini_me" style="margin: .5em;" src="images/notif.gif"  />
 		</div>
 
-		
-
+		<div id="ty" class="thankYouMsg" style="display: none;">
+			<div style="width: 100%; display: flex; justify-content: end;">
+				<span class="closeButton" onclick="closeMessage()"> X </span>
+			</div>
+			<div style="padding: 0 1em 1em 1em;">
+			<h1 style="font-family: Silkscreen; margin: 0;">THANK YOU</h1>
+			Thank you for sending a message!
+			I appreciate it :&gt;
+			</div>
+		</div>
 
 		<!-- Scripts -->
 			<script src="funcs.js"></script>
