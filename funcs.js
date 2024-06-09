@@ -6,12 +6,10 @@ function newImg(id, newImg){
 
 //show one component and hide 3 components for "navigation"
 function navigate(show, hide1, hide2, hide3){
-    console.log("values are: ", show, hide1, hide2, hide3)
     let s = document.getElementById(show)
     let hi1 = document.getElementById(hide1)
     let hi2 = document.getElementById(hide2)
     let hi3 = document.getElementById(hide3)
-    console.log("values are: ", s, hi1, hi2, hi3)
 
     s.style.display = "flex"
     hi1.style.display = "none"
@@ -42,9 +40,9 @@ function changeDialogue(page){
 
     if(page === "home"){
         
-        portrait.style.setProperty('--n', '14s')
+        portrait.style.setProperty('--n', '5s')
         text.style.setProperty('--n', '80')
-        text.innerHTML = "Hi, I'm John Vergil Aparri. Welcome to my portfolio website! How can I help you?"
+        text.innerHTML = "Hi, I'm John Vergil Aparri. Welcome to my portfolio website!"
     }
     else if(page === "project"){
         portrait.style.setProperty('--n', '13s')
@@ -73,7 +71,6 @@ function closeDialogueBox(){
     let icon = document.getElementById("SideIcon")
     let home = document.getElementById("homeContent")
 
-    home.style.height = "70vh"
     icon.style.display = "block"
     box.style.display = "none"    
 }
@@ -83,7 +80,6 @@ function openDialogueBox(){
     let icon = document.getElementById("SideIcon")
     let home = document.getElementById("homeContent")
 
-    home.style.height = "50vh"
     icon.style.display = "none"
     box.style.display = "flex"    
 }
@@ -113,11 +109,14 @@ function openMessage(){
     let msg = document.getElementById("ty")
     let frm = document.getElementById("msgForm")
 
+    console.log("checking", checkform(frm));
     if(checkform(frm)){
         frm.submit();
         frm.reset();
         navigate('homeContent', 'projectContent', 'aboutContent', 'contactContent')
 		changeDialogue('home')
         msg.style.display = "block"
-    } 
+    } else{
+        alert("Please fill in all the fields");
+    }
 }
